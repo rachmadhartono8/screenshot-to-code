@@ -136,7 +136,7 @@ function ImageUpload({ setReferenceImages }: Props) {
   );
 
   return (
-    <section className="container">
+    <section className="container mt-10">
       {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
       <div {...getRootProps({ style: style as any })}>
         <input {...getInputProps()} />

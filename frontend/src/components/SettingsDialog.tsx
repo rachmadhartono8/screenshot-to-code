@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/dialog";
 import { FaCog } from "react-icons/fa";
 import { EditorTheme, Settings } from "../types";
-import { Switch } from "./ui/switch";
+// import { Switch } from "./ui/switch";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { Select } from "./ui/select";
@@ -38,7 +38,7 @@ function SettingsDialog({ settings, setSettings }: Props) {
           <DialogTitle className="mb-4">Settings</DialogTitle>
         </DialogHeader>
         <div className="flex items-center space-x-2">
-          <Label htmlFor="image-generation">
+          {/* <Label htmlFor="image-generation">
             <div>DALL-E Placeholder Image Generation</div>
             <div className="font-light mt-2">
               More fun with it but if you want to save money, turn it off.
@@ -53,7 +53,7 @@ function SettingsDialog({ settings, setSettings }: Props) {
                 isImageGenerationEnabled: !s.isImageGenerationEnabled,
               }))
             }
-          />
+          /> */}
         </div>
         <div className="flex flex-col space-y-4">
           <Label htmlFor="openai-api-key">
@@ -116,7 +116,7 @@ function SettingsDialog({ settings, setSettings }: Props) {
               <option value="cobalt">Cobalt</option>
               <option value="espresso">Espresso</option>
             </Select>
-          </div>
+          </div> 
         </div>
 
         <DialogFooter>

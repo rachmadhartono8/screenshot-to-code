@@ -9,11 +9,12 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { FaCog } from "react-icons/fa";
-import { EditorTheme, Settings } from "../types";
+// import { EditorTheme, Settings } from "../types";
+import { Settings } from "../types";
 // import { Switch } from "./ui/switch";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
-import { Select } from "./ui/select";
+// import { Select } from "./ui/select";
 
 interface Props {
   settings: Settings;
@@ -21,12 +22,12 @@ interface Props {
 }
 
 function SettingsDialog({ settings, setSettings }: Props) {
-  const handleThemeChange = (theme: EditorTheme) => {
-    setSettings((s) => ({
-      ...s,
-      editorTheme: theme,
-    }));
-  };
+  // const handleThemeChange = (theme: EditorTheme) => {
+  //   setSettings((s) => ({
+  //     ...s,
+  //     editorTheme: theme,
+  //   }));
+  // };
 
   return (
     <Dialog>
@@ -59,8 +60,9 @@ function SettingsDialog({ settings, setSettings }: Props) {
           <Label htmlFor="openai-api-key">
             <div>OpenAI API key</div>
             <div className="font-light mt-2 leading-relaxed">
-              Only stored in your browser. Never stored on servers. Overrides
-              your .env config.
+              {/* Only stored in your browser. Never stored on servers. Overrides
+              your .env config. */}
+              Menimpa settingan di .env config
             </div>
           </Label>
 
@@ -76,7 +78,7 @@ function SettingsDialog({ settings, setSettings }: Props) {
             }
           />
 
-          <Label htmlFor="screenshot-one-api-key">
+          {/* <Label htmlFor="screenshot-one-api-key">
             <div>ScreenshotOne API key</div>
             <div className="font-light mt-2 leading-relaxed">
               Only stored in your browser. Never stored on servers.{" "}
@@ -100,9 +102,9 @@ function SettingsDialog({ settings, setSettings }: Props) {
                 screenshotOneApiKey: e.target.value,
               }))
             }
-          />
+          /> */}
 
-          <Label htmlFor="editor-theme">
+          {/* <Label htmlFor="editor-theme">
             <div>Editor Theme</div>
           </Label>
           <div>
@@ -116,7 +118,7 @@ function SettingsDialog({ settings, setSettings }: Props) {
               <option value="cobalt">Cobalt</option>
               <option value="espresso">Espresso</option>
             </Select>
-          </div> 
+          </div>  */}
         </div>
 
         <DialogFooter>

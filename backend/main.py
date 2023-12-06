@@ -58,7 +58,7 @@ def write_logs(prompt_messages, completion):
     with open(filename, "w") as f:
         f.write(json.dumps({"prompt": prompt_messages, "completion": completion}))
 
-#! url route
+#! url route open ai
 @app.websocket("/generate-code")
 async def stream_code(websocket: WebSocket):
     await websocket.accept()

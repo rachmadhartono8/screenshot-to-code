@@ -4,7 +4,7 @@ from openai import AsyncOpenAI
 
 MODEL_GPT_4_VISION = "gpt-4-vision-preview"
 
-
+# ! Setting openAI
 async def stream_openai_response(
     messages, api_key: str, callback: Callable[[str], Awaitable[None]]
 ):

@@ -11,6 +11,7 @@ import traceback
 from datetime import datetime
 from fastapi import FastAPI, WebSocket
 from fastapi.middleware.cors import CORSMiddleware
+# ! Lib OpenAi
 from llm import stream_openai_response
 from mock import mock_completion
 from image_generation import create_alt_url_mapping, generate_images
@@ -115,6 +116,7 @@ async def stream_code(websocket: WebSocket):
     if SHOULD_MOCK_AI_RESPONSE:
         completion = await mock_completion(process_chunk)
     else:
+        # ! Genereate html form openai stream
         completion = await stream_openai_response(
             prompt_messages,
             api_key=openai_api_key,

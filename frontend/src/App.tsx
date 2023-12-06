@@ -25,7 +25,7 @@ import { IS_RUNNING_ON_CLOUD } from './config';
 import { PicoBadge } from './components/PicoBadge';
 import { OnboardingNote } from './components/OnboardingNote';
 import { usePersistedState } from './hooks/usePersistedState';
-import { UrlInputSection } from './components/UrlInputSection';
+// import { UrlInputSection } from './components/UrlInputSection';
 import TermsOfServiceDialog from './components/TermsOfServiceDialog';
 import { USER_CLOSE_WEB_SOCKET_CODE } from './constants';
 
@@ -250,13 +250,15 @@ function App() {
       </div>
 
       <main className='py-2 lg:pl-96'>
+
         {appState === AppState.INITIAL && (
+
           <div className='flex flex-col justify-center items-center gap-y-10'>
             <ImageUpload setReferenceImages={doCreate} />
-            <UrlInputSection
+            {/* <UrlInputSection
               doCreate={doCreate}
               screenshotOneApiKey={settings.screenshotOneApiKey}
-            />
+            /> */}
           </div>
         )}
 

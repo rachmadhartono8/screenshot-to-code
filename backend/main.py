@@ -57,7 +57,7 @@ def write_logs(prompt_messages, completion):
     with open(filename, "w") as f:
         f.write(json.dumps({"prompt": prompt_messages, "completion": completion}))
 
-
+#! url route
 @app.websocket("/generate-code")
 async def stream_code(websocket: WebSocket):
     await websocket.accept()
@@ -66,6 +66,7 @@ async def stream_code(websocket: WebSocket):
 
     # Get the OpenAI API key from the request. Fall back to environment variable if not provided.
     # If neither is provided, we throw an error.
+    #! url hit antar service open api
     if params["openAiApiKey"]:
         openai_api_key = params["openAiApiKey"]
         print("Using OpenAI API key from client-side settings dialog")
